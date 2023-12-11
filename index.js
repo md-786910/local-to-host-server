@@ -8,6 +8,10 @@ app.use(bodyParser());
 
 let clientResponseRef;
 
+app.get("/", (req, res) => {
+  res.send("HI");
+});
+
 app.get("/*", (req, res) => {
   const pathname = url.parse(req.url).pathname;
 
@@ -41,7 +45,7 @@ io.on("connection", (socket) => {
   });
 });
 
-const server_port = process.env.YOUR_PORT || process.env.PORT || 3000;
+const server_port = process.env.YOUR_PORT || process.env.PORT || 5000;
 http.listen(server_port, () => {
   console.log("listening on *:" + server_port);
 });
