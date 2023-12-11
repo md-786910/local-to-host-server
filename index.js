@@ -8,9 +8,9 @@ app.use(bodyParser());
 
 let clientResponseRef;
 
-app.get("/", (req, res) => {
-  res.send("HI");
-});
+// app.get("/", (req, res) => {
+//   res.send("HI");
+// });
 
 app.get("/*", (req, res) => {
   const pathname = url.parse(req.url).pathname;
